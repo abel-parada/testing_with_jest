@@ -62,3 +62,66 @@ sum('') throws an exception `'parameter missing'`
 - sum('a','b') throws an exception `'only numbers allowed'`
 - sum('','') throws an exception `'only numbers allowed'`
 - sum(null,1) throws an exception `'only numbers allowed'`
+
+#### substract
+
+##### Integers
+
+- substract(1,1) returns 0
+- substract(2,3) returns -1
+- substract(-2,-4) returns 2
+- substract(-2,4) returns -6
+
+        a, b, expected
+        [2,-4,    6],
+        [0,0,     0],
+        [0,3,    -3],
+        [3,0,     3],
+        [0,-3,    3],
+        [-3,0,   -3]
+
+##### Floats
+
+        a,b,      expexted
+        [10,11.5,   -1.5],
+        [2.5,3,     -0.5],
+        [-2.5,3,    -5.5],
+        [2.5,-3,     5.5],
+        [-2.5,-2.5,    0],
+        [-2.5,2.5,    -5],
+        [2.4,-2.5,   4.9]
+
+#### Missing paramenters
+
+substract(null) throws an exception `'parameter missing'`
+substract(1) throws an exception `'parameter missing'`
+substract('a') throws an exception `'parameter missing'`
+substract('') throws an exception `'parameter missing'`
+
+#### Parameters are not numbers
+
+- substract('a',1) throws an exception `'only numbers allowed'`
+- substract(1,'a') throws an exception `'only numbers allowed'`
+- substract('a','b') throws an exception `'only numbers allowed'`
+- substract('','') throws an exception `'only numbers allowed'`
+- substract(null,1) throws an exception `'only numbers allowed'`
+
+# How to run
+
+## 1. Install jest as devDependency
+
+```shell
+> npm install jest --save-dev
+```
+
+## 2. To run tests
+
+```shell
+> npm test
+```
+
+### 2B. To run only one test file
+
+```shell
+> npm test --testFile fileToBeTested.test.js
+```
