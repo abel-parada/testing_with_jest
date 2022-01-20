@@ -106,6 +106,17 @@ substract('') throws an exception `'parameter missing'`
 - substract('','') throws an exception `'only numbers allowed'`
 - substract(null,1) throws an exception `'only numbers allowed'`
 
+#### Divide
+
+More documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+test:
+//a,b, expexted
+[0,0, Number.NaN],
+[2,0, Number.POSITIVE_INFINITY],
+[-2,0, number.NEGATIVE_INFINITY],
+[Number.POSITIVE_INFINITY,Number.POSITIVE_INFINITY, Number.NaN]
+
 # How to run
 
 ## 1. Install jest as devDependency
